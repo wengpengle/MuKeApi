@@ -23,7 +23,7 @@ class LoginController extends CommonController{
         if( $result ){
             #验证用户的手机号
             if( !preg_match("/^1[34578]\d{9}$/", $data['phone']) ){
-                $this -> defeat( 1 , '手机号码格式不正确' );
+               return $this -> defeat( 1 , '手机号码格式不正确' );
             }
             #查询用户的数据信息
             $userInfo = DB::table('username') -> where( 'phone', $data['phone'] ) -> first();
@@ -32,12 +32,12 @@ class LoginController extends CommonController{
                 #检测用户跟密码是否匹配
                 if( md5($data['password']) == md5($userInfo['password'])){
                     #成功放回用户的信息
-                    $this -> success( $userInfo );
+                   return $this -> success( $userInfo );
                 }else{
-                    $this -> defeat( 1, '用户名和密码不匹配' );
+                   return $this -> defeat( 1, '用户名和密码不匹配' );
                 }
             }else{
-                $this -> defeat( 1, '用户名不存在' );
+               return $this -> defeat( 1, '用户名不存在' );
             }
         }else{
             debug($result);

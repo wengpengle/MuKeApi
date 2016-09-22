@@ -26,11 +26,8 @@ class CommonController extends Controller{
         #失败时返回的错误数据
         $errorArray['data'] = $errorData;
 
-<<<<<<< HEAD
+
        return  $this -> JsonOutPut( $errorArray , $otherData );
-=======
-        $this -> JsonOutPut( $errorArray , $otherData);
->>>>>>> c765861bca3d373c07de7045d479a72a9dd7e5c8
 
     }
 
@@ -51,7 +48,7 @@ class CommonController extends Controller{
         #失败时返回的错误数据
         $successArray['data'] = $data;
 
-        $this -> JsonOutPut( $successArray , $otherData );
+        return $this -> JsonOutPut( $successArray , $otherData );
 
     }
 
@@ -74,13 +71,8 @@ class CommonController extends Controller{
         #返回的JSON数据
         $jsonData = json_encode($array,true);
 
-<<<<<<< HEAD
-        return $jsonData;
 
-=======
-        echo $jsonData;
-        exit();
->>>>>>> c765861bca3d373c07de7045d479a72a9dd7e5c8
+        return $jsonData;
     }
 
 }

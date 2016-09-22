@@ -39,10 +39,8 @@ Route::any('login/login','LoginController@checkLogin');
 #检测用户注册的接口
 Route::any('login/register','LoginController@checkUser');
 
-<<<<<<< HEAD
 #加薪利器模块接口
 Route::any('raises/index','RaisesController@index');
-=======
+
 #网站首页接口
 Route::any('index/index','IndexController@index');
->>>>>>> c765861bca3d373c07de7045d479a72a9dd7e5c8
