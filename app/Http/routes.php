@@ -35,3 +35,6 @@ Route::any('login/login','LoginController@checkLogin');
 
 #检测用户注册的接口
 Route::any('login/register','LoginController@checkUser');
+
+#加薪利器模块接口
+Route::any('raises/index','RaisesController@index');
