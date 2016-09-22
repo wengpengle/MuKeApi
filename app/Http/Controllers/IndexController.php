@@ -16,7 +16,7 @@ class IndexController extends CommonController{
      * 首页 【首页的列表页】
      */
     public function indexList(){
-        
+
     }
 
     /*
