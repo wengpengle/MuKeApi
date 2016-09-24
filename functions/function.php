@@ -47,12 +47,13 @@ function CheckParam( $param ){
     #判断参数是否为空
     if( empty($param) ){
         $msg = [
-            'msg' => '友情提示------->请求接口 请您传递接口所需要的对应参数 O(∩_∩)O~',
+            'msg' => '友情提示------->请求接口 请您传递接口所需要的参数 O(∩_∩)O~',
         ];
         return json_encode($msg , JSON_UNESCAPED_UNICODE );
-        exit;
     }else{
-        return true;
+        return $msg = [
+            'status' => '1'
+        ];
     }
 }
 
